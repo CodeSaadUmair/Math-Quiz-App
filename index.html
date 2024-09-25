@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="https://img.icons8.com/?size=100&id=13216&format=png&color=000000"
+      type="image/x-icon"
+    />
+    <title>Math Quiz App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <div class="card default-box-shadow">
+        <h1>Score => <span class="score">0</span></h1>
+        <div class="info">
+          <label for="difficulty">Select Difficulty:</label>
+          <select id="difficulty" aria-label="Select difficulty level">
+            <option value="easy">Easy</option>
+            <option value="medium">Medium</option>
+            <option value="hard">Hard</option>
+          </select>
+          <div class="timer">Time left: <span id="time">30</span> sec</div>
+          <div class="highScore">High Score: <span id="highScore">0</span></div>
+        </div>
+        <h2><span class="question">Q. What is 6 Subtract from 2?</span></h2>
+        <form id="questionForm" onsubmit="checkAnswer(event)">
+          <input type="number" name="ans" id="ans" required />
+          <button type="submit" id="sub-btn" aria-label="Submit your answer">
+            Submit
+          </button>
+        </form>
+        <button class="restart-btn" style="display: none;" onclick="restartGame()">
+          Restart
+        </button>
+      </div>
+      <script src="app.js"></script>
+    </main>
+  </body>
+</html>
